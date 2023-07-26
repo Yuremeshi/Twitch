@@ -3,15 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
+    <link href="build/index.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <nav class="top-nav-container">
-        Top nav bar stuff goes in here.
-    </nav>
-    <div class="content-container">
-        All content, sidebar, twitch chat, about stuff goes in this div.
+<body class="">
+    <div class="whole-page-container">
+        <nav class="top-nav-container">
+            <div class="nav-div-container">
+                <div class="left-div-container">
+                    <div class="twitch-icon-container">
+                        <div class="twitch-icon-background">
+                            <a href="index.html"><img class="twitch-icon" src="./src/img/twitch.png"></a>
+                        </div>
+                    </div>
+                    <div class="follow-link-container text-icon-container">
+                        <a class="follow-text text" href="index.html">Following</a>
+                    </div>
+                    <div class="browse-link-container text-icon-container">
+                        <a class="browse-text text" href="index.html">Browse</a>
+                    </div>
+                    <div class="misc-link-container dropdown">
+                        <button class="misc-button dropdown-button">
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </button>
+                        <ul class="misc-dropdown-content dropdown-content">
+                            <p>General</p>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="index.html">Security</a></li>
+                            <li><a href="index.html">Other Stuff</a></li>
+                            <span class="line"></span>
+                            <p>Help & Legal</p>
+                            <li><a href="index.html">Legal</a></li>
+                            <li><a href="index.html">Halp</a></li>
+                            <li><a href="index.html">Accessibility Statement</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search-div-container">
+                    <div class="search-bar-container text-icon-container">
+                        <input type="text" placeholder="Search" class="search-bar">
+                    </div>
+                    <div class="search-button-container text-icon-container">
+                        <button class="search-button"><img class="search-icon" src="./src/img/search.png"></button>
+                    </div>
+                </div>
+                <div class="right-div-container">
+                    <div class="crown-icon-container text-icon-container">
+                        Crown
+                    </div>
+                    <div class="inventory-icon-container text-icon-container">
+                        Inventory
+                    </div>
+                    <div class="message-icon-container text-icon-container">
+                        Message
+                    </div>
+                    <div class="bit-icon-container text-icon-container">
+                        Bit icon
+                    </div>
+                    <div class="turbo-container text-icon-container">
+                        Turbo
+                    </div>
+                    <div class="7tv-container text-icon-container">
+                        7tv
+                    </div>
+                    <div class="account-container text-icon-container">
+                        Account
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="content-container">
+            All content, sidebar, twitch chat, about stuff goes in this div.
+        </div>
     </div>
 </body>
 </html>

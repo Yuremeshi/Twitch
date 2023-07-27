@@ -19,6 +19,8 @@ body {
     flex-grow: 1;
 }
 
+// CSS for general containers
+
 .top-nav-container {
     border: 2px solid blue;
     height: 3.5rem;
@@ -55,6 +57,8 @@ body {
     height: 100%;
 }
 
+// CSS for left side of navbar, with some general button/dropdown stuff included
+
 .twitch-icon-container {
     display: flex;
     align-items: center;
@@ -67,6 +71,7 @@ body {
 
 .text-icon-container {
     display: flex;
+    position: relative;
     align-items: center;
     height: 100%;
 }
@@ -87,7 +92,7 @@ body {
     flex-direction: column;
 }
 
-.misc-button {
+.dropdown-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,16 +100,43 @@ body {
     height: 35px;
     width: 35px;
     border-radius: 25%;
+    background-color: transparent;
+    border: none;
 }
 
-.misc-button:hover {
+.dropdown-button:hover {
     background-color: mix(black, white, 80%);
     cursor: pointer;
 }
 
-.dropdown-button {
-    background-color: transparent;
-    border: none;
+.nav-tooltip {
+    position: absolute;
+    background-color: mix(black, white, 15%);
+    color: black;
+    padding: 4px;
+    border-radius: 3px;
+    visibility: hidden;
+}
+
+.misc-tooltip {
+    top: 100%;
+    left: 60%;
+    margin-left: -26px;
+    z-index: 1002;
+}
+
+.nav-tooltip:after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 6px solid;
+    border-color: transparent transparent mix(black, white, 15%) transparent;
+}
+
+.button-tooltip:hover .nav-tooltip {
+    visibility: visible;
 }
 
 .circle {
@@ -119,17 +151,23 @@ body {
 .dropdown-content {
     list-style: none;
     position: absolute;
-    top: 3.2em;
+    top: 80%;
     background-color: mix(black, white, 87%);
     padding: 20px;
     padding-top: 0px;
     border-radius: 5px;
     opacity: 0%;
+    display: none;
+}
+
+.misc-dropdown-content {
+    left: 60%;
 }
 
 .dropdown:focus-within .dropdown-content {
     opacity: 100%;
     transition: opacity .2s;
+    display: block;
 }
 
 .misc-dropdown-content>li {
@@ -141,18 +179,18 @@ body {
     height: 20px;
 }
 
-.dropdown-content>p {
+.misc-dropdown-content>p {
     color: mix(black, white, 40%);
     padding: 0;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
-.dropdown-content>li:hover {
+.misc-dropdown-content>li:hover {
     background-color: mix(black, white, 78%);
 }
 
-li>a {
+li>a, div>a {
     display: flex;
     width: 100%;
     text-decoration: none;
@@ -167,6 +205,8 @@ li>a {
     margin-top: 15px;
     border-top: 1px solid mix(black, white, 78%);
 }
+
+// CSS for search bar and button
 
 .search-div-container {
     display: flex;
@@ -214,13 +254,88 @@ li>a {
 .search-button {
     border: none;
     height: 100%;
+    width: 37px;
     margin: 0;
     background-color: mix(black, white, 80%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
+.search-button:hover {
+    cursor: pointer;
+}
+
 .search-icon {
     height: 20px;
     width: 20px;
+}
+
+// CSS for right side of navbar
+
+.crown-icon {
+    height: 38px;
+}
+
+.crown-tooltip {
+    top: 100%;
+    left: 60%;
+    margin-left: -43px;
+    z-index: 1002;
+}
+
+.right-dropdown-content {
+    display: flex;
+    right: 30%;
+    padding: 0;
+    gap: 0;
+}
+
+.crown-prime-container {
+    display: flex;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 370px;
+    justify-content: space-between;
+}
+
+.crown-dropdown-prime {
+    width: 120px;
+}
+
+.crown-dropdown-prime:hover {
+    background-color: mix(black, white, 78%);
+    border-radius: 5px;
+}
+
+.prime-gaming-image {
+    width: 120px;
+}
+
+.close {
+    display: flex;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.crown-dropdown-div {
+    width: 370px;
+}
+
+.crown-dropdown-div>p {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.prime-loot-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(145, 70, 255);
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
 }

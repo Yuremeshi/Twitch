@@ -22,12 +22,16 @@
                     <div class="browse-link-container text-icon-container">
                         <a class="browse-text text" href="index.html">Browse</a>
                     </div>
-                    <div class="misc-link-container dropdown">
-                        <button class="misc-button dropdown-button">
-                            <span class="circle"></span>
-                            <span class="circle"></span>
-                            <span class="circle"></span>
-                        </button>
+                    <div class="misc-link-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="misc-button dropdown-button">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </button>
+                            <span class="misc-tooltip nav-tooltip">More</span>
+                        </div>
+
                         <ul class="misc-dropdown-content dropdown-content">
                             <p>General</p>
                             <li><a href="index.html">About</a></li>
@@ -50,8 +54,32 @@
                     </div>
                 </div>
                 <div class="right-div-container">
-                    <div class="crown-icon-container text-icon-container">
-                        Crown
+                    <div class="crown-icon-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="crown-dropdown dropdown-button">
+                                <img class="crown-icon" src="./src/img/crown.png">
+                            </button>
+                            <span class="crown-tooltip nav-tooltip">Prime Loot</span>
+                        </div>
+
+                        <div class="crown-dropdown-content dropdown-content right-dropdown-content">
+                            <div class="crown-prime-container">
+                                <a href="index.html" class="crown-dropdown-prime">
+                                    <img class="prime-gaming-image" alt="Prime Gaming" src="./src/img/prime.png">
+                                </a>
+                                <div class="crown-empty"></div>
+                                <div class="close dropdown-button">&times;</div>
+                            </div>
+                            <div class="crown-dropdown-div dropdown-content">
+                                <p>View all Prime Gaming offers, even those you've dismissed.</p>
+                                <button class="prime-loot-button">
+                                    <img class="crown-icon" alt="Prime Gaming" src="./src/img/crown.png">
+                                    Visit the Prime Gaming Loot Page
+                                </button>
+                                <span class="line"></span>
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="inventory-icon-container text-icon-container">
                         Inventory

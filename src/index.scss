@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+$icon_size: 1em;
 
 body {
     display: flex;
@@ -12,6 +10,7 @@ body {
     background-color: mix(black, white, 90%);
     border: 2px solid red;
     color: white;
+    overflow: scroll;
 }
 
 .whole-page-container {
@@ -115,14 +114,16 @@ body {
     color: black;
     padding: 4px;
     border-radius: 3px;
-    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    left: 60%;
+    z-index: 1002;
 }
 
 .misc-tooltip {
     top: 100%;
     left: 60%;
     margin-left: -26px;
-    z-index: 1002;
 }
 
 .nav-tooltip:after {
@@ -136,7 +137,9 @@ body {
 }
 
 .button-tooltip:hover .nav-tooltip {
-    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s;
+    transition-delay: .3s;
 }
 
 .circle {
@@ -151,43 +154,35 @@ body {
 .dropdown-content {
     list-style: none;
     position: absolute;
-    top: 80%;
+    top: 100%;
     background-color: mix(black, white, 87%);
     padding: 20px;
     padding-top: 0px;
     border-radius: 5px;
-    opacity: 0%;
     display: none;
+    z-index: 1003;
 }
 
 .misc-dropdown-content {
-    left: 60%;
+    left: 0%;
+    top: 70%;
 }
 
 .dropdown:focus-within .dropdown-content {
-    opacity: 100%;
-    transition: opacity .2s;
     display: block;
 }
 
-.misc-dropdown-content>li {
-    padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.list-dropdown-content>li {
     margin-top: 10px;
     border-radius: 3px;
     height: 20px;
 }
 
-.misc-dropdown-content>p {
+.list-dropdown-content>p {
     color: mix(black, white, 40%);
-    padding: 0;
+    padding-left: 5px;
     margin-top: 10px;
     margin-bottom: 0px;
-}
-
-.misc-dropdown-content>li:hover {
-    background-color: mix(black, white, 78%);
 }
 
 li>a, div>a {
@@ -196,7 +191,12 @@ li>a, div>a {
     text-decoration: none;
     color: white;
     margin: 0;
-    padding: 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+li>a:hover {
+    background-color: mix(black, white, 78%);
 }
 
 .line {
@@ -277,15 +277,11 @@ li>a, div>a {
 }
 
 .crown-tooltip {
-    top: 100%;
-    left: 60%;
     margin-left: -43px;
-    z-index: 1002;
 }
 
 .right-dropdown-content {
-    display: flex;
-    right: 30%;
+    right: 10%;
     padding: 0;
     gap: 0;
 }
@@ -293,7 +289,7 @@ li>a, div>a {
 .crown-prime-container {
     display: flex;
     padding: 10px 20px;
-    border: 1px solid black;
+    outline: 1px solid black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 370px;
@@ -320,15 +316,17 @@ li>a, div>a {
 }
 
 .crown-dropdown-div {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 370px;
 }
 
-.crown-dropdown-div>p {
+.text-overflow {
     overflow-wrap: break-word;
     white-space: normal;
 }
 
-.prime-loot-button {
+.prime-button-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,5 +335,224 @@ li>a, div>a {
     width: 100%;
     color: white;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
+    height: 36px;
 }
+
+.prime-button-link:hover {
+    background-color: rgb(116, 34, 240);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+// CSS for Inventory/notifications
+.inventory-icon {
+    width: 19px;
+}
+
+.inventory-tooltip {
+    margin-left: -49px;
+}
+
+.right-dropdown-container {
+    display: flex;
+    padding: 10px 20px;
+    outline: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 370px;
+    align-items: center;
+    height: 40px;
+}
+
+.inventory-read {
+    display: flex;
+    width: 36px;
+}
+
+.right-dropdown-text {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.right-dropdown-rightdiv {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.settings-link {
+    width: 36px;
+}
+
+.emptyspace, .inventory-read-container, .right-dropdown-text, .right-dropdown-rightdiv {
+    white-space: nowrap;
+    flex: 1;
+}
+
+.right-content-dropdown-div {
+    border-top: 1px solid black;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.inventory-stuff-image {
+    width: 370px;
+}
+
+.message-icon {
+    width: 19px;
+}
+
+.message-tooltip {
+    margin-left: -39px;
+}
+
+.search-bar-message-div {
+    margin-top: 12px;
+    width: 370px;
+    border-radius: 4px;
+}
+
+.search-bar-message {
+    height: 32px;
+    border-radius: 4px;
+}
+
+.message-div-content {
+    height: 200px;
+    justify-content: center;
+}
+
+// CSS for Bit dropdown menu
+
+.bit-tooltip {
+    margin-left: -33px;
+}
+
+.bit-icon {
+    width: 18px;
+    height: 20px;
+}
+
+.bit-gif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bit-gif {
+    width: 70%;
+}
+
+.bit-dropdown-content {
+    width: 370px;
+    border-radius: 5px;
+    right: 0%;
+}
+
+.bit-title-container {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.bit-learn-text {
+    text-decoration: none;
+    color: rgba(145, 70, 255);
+}
+
+.bit-learn-text:hover {
+    text-decoration: underline;
+    color: rgb(116, 34, 240);
+}
+
+// CSS for TURBO
+
+.turbo-tooltip {
+    margin-left: -34px;
+}
+
+.turbo-dropdown-content {
+    right: 0%;
+}
+
+.turbo-button {
+    flex-direction: row;
+    background-color: mix(black, white, 80%);
+    color: white;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.turbo-icon {
+    width: 19px;
+}
+
+.turbo-ad-content {
+    padding: 0;
+}
+
+.turbo-ad-image {
+    width: 410px;
+}
+
+// CSS for 7TV
+
+.seven-tv-tooltip {
+    margin-left: -48px;
+}
+
+// CSS for Account
+
+.account-button {
+    border-radius: 50%;
+}
+
+.account-icon {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.account-dropdown-content {
+    width: 240px;
+    font-size: 18px;
+}
+
+.account-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    width: 240px;
+    border: none;
+    outline: none;
+    height: 100%;
+}
+
+.account-dropdown-icon {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.account-name-icon {
+    display: flex;
+    align-items: center;
+}
+
+.account-dropdown-content-list {
+    display: flex;
+    margin: 0;
+    width: 200px;
+    right: 0%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="build/index.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fake Twitch</title>
 </head>
 <body class="">
     <div class="whole-page-container">
@@ -32,7 +33,7 @@
                             <span class="misc-tooltip nav-tooltip">More</span>
                         </div>
 
-                        <ul class="misc-dropdown-content dropdown-content">
+                        <ul class="misc-dropdown-content list-dropdown-content dropdown-content">
                             <p>General</p>
                             <li><a href="index.html">About</a></li>
                             <li><a href="index.html">Security</a></li>
@@ -70,34 +71,230 @@
                                 <div class="crown-empty"></div>
                                 <div class="close dropdown-button">&times;</div>
                             </div>
+                            <div class="crown-empty"><br></div>
                             <div class="crown-dropdown-div dropdown-content">
-                                <p>View all Prime Gaming offers, even those you've dismissed.</p>
-                                <a class="prime-loot-button" href="index.html">
+                                <p class="text-overflow">View all Prime Gaming offers, even those you've dismissed.</p>
+                                <a class="prime-button-link" href="index.html">
                                     <img class="crown-icon" alt="Prime Gaming" src="./src/img/crown.png">
                                     Visit the Prime Gaming Loot Page
                                 </a>
                                 <span class="line"></span>
-
+                                <div class="image-container">
+                                    <img class="honkai-image" alt="Honkai Star Rail" src="./src/img/honkai.png">
+                                </div>
+                                <a class="prime-button-link" href="index.html">
+                                    Claim
+                                </a>
+                                <span class="line"></span>
+                                <div class="image-container">
+                                    <img class="league-image" alt="League of Legends" src="./src/img/league.png">
+                                </div>
+                                <a class="prime-button-link" href="index.html">
+                                    Claim
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="inventory-icon-container text-icon-container">
-                        Inventory
+                    <div class="inventory-icon-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="inventory-dropdown dropdown-button">
+                                <img class="inventory-icon" src="./src/img/inventory.png">
+                            </button>
+                            <span class="inventory-tooltip nav-tooltip">Notifications</span>
+                        </div>
+                        <div class="inventory-dropdown-content dropdown-content right-dropdown-content">
+                            <div class="right-dropdown-container">
+                                <div class="inventory-read-container">
+                                    <a href="index.html" class="inventory-read dropdown-button">
+                                        <img class="inventory-icon" alt="inventory" src="./src/img/notifications.png">
+                                    </a>
+                                </div>
+                                <p class="right-dropdown-text">Notifications</p>
+                                <div class="right-dropdown-rightdiv">
+                                    <div class="settings-container">
+                                        <a href="index.html" class="settings-link dropdown-button">
+                                            <i class="fa fa-cog" style="font-size: 22px"></i>
+                                        </a>
+                                    </div>
+                                    <div class="close dropdown-button">&times;</div>
+                                </div>
+                            </div>
+                            <div class="empty"></div>
+                            <div class="right-content-dropdown-div dropdown-content">
+                                <img class="inventory-stuff-image" alt="Inventory Stuff" src="./src/img/inventorystuff.png">
+                            </div>
+                        </div>
                     </div>
-                    <div class="message-icon-container text-icon-container">
-                        Message
+                    <div class="message-icon-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="message-dropdown dropdown-button">
+                                <img class="message-icon" src="./src/img/Message.png">
+                            </button>
+                            <span class="message-tooltip nav-tooltip">Whispers</span>
+                        </div>
+                        <div class="message-dropdown-content dropdown-content right-dropdown-content">
+                            <div class="right-dropdown-container">
+                                <div class="emptyspace"></div>
+                                <p class="right-dropdown-text">Whispers</p>
+                                <div class="right-dropdown-rightdiv">
+                                    <div class="settings-container">
+                                        <a href="index.html" class="settings-link dropdown-button">
+                                            <i class="fa fa-cog" style="font-size: 22px"></i>
+                                        </a>
+                                    </div>
+                                    <div class="close dropdown-button">&times;</div>
+                                </div>
+                            </div>
+                            <div class="empty"></div>
+                            <div class="right-content-dropdown-div dropdown-content">
+                                <div class="search-div-container">
+                                    <div class="empty"><span class="line"></span></div>                                    
+                                    <div class="search-bar-container text-icon-container search-bar-message-div">
+                                        <input type="text" placeholder="Search for People" class="search-bar search-bar-message">
+                                    </div>
+                                </div>
+                                <span class="line"></span>
+                                <div class="message-div-content text-icon-container">
+                                    There are no messages.  Sadge.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bit-icon-container text-icon-container">
-                        Bit icon
+                    <div class="bit-icon-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="bit-dropdown dropdown-button">
+                                <img class="bit-icon" src="./src/img/bit.png">
+                            </button>
+                            <span class="bit-tooltip nav-tooltip">Get Bits</span>
+                        </div>
+                        <div class="bit-dropdown-content dropdown-content right-dropdown-content">                            
+                            <div class="right-content-dropdown-div dropdown-content bit-dropdown-content">
+                                <div class="bit-title-container">
+                                    <p class="bits-dropdown-title">Join the party with Bits</p>
+                                </div>                                
+                                <p class="text-overflow">Celebrate big moments and support your favorite streamers with special animated emotes! &nbsp; 
+                                    <a href="index.html" class="bit-learn-text">Learn more</a>
+                                </p>
+
+                                <div class="bit-gif-container">
+                                    <img src="https://d3aqoihi2n8ty8.cloudfront.net/bits-card/intro/dark/bits-new-user-dark.gif" alt="bit gif" class="bit-gif">
+                                </div>
+
+                                <a class="prime-button-link" href="index.html">
+                                    First-Time Purchaser Discount
+                                </a>
+                            </div>                            
+                        </div>
                     </div>
-                    <div class="turbo-container text-icon-container">
-                        Turbo
+                    <div class="turbo-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="turbo-button dropdown-button">
+                                <img class="turbo-icon" src="./src/img/turbo.png">
+                                &nbsp; Get Ad-Free
+                            </button>
+                            <span class="turbo-tooltip nav-tooltip">Turbo</span>
+                        </div>
+                        <div class="turbo-dropdown-content dropdown-content right-dropdown-content">
+                            <div class="right-dropdown-container turbo-dropdown-container">
+                                <div class="emptyspace"></div>
+                                <p class="right-dropdown-text">Remove Ads with Turbo</p>
+                                <div class="right-dropdown-rightdiv">
+                                    <div class="close dropdown-button">&times;</div>
+                                </div>
+                            </div>
+                            <div class="empty"></div>
+                            <div class="right-content-dropdown-div dropdown-content turbo-ad-content">
+                                <div class="turbo-ad-container">
+                                    <img class="turbo-ad-image" alt="twitch TURBO" src="./src/img/turboad.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="7tv-container text-icon-container">
-                        7tv
+                    <div class="seven-tv-container text-icon-container">
+                        <div class="button-tooltip">     
+                            <button class="seven-tv-button dropdown-button">                       
+                                <svg data-v-a098149a="" width="20px" height="20px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 23.551">
+                                    <path d="M2.383,0,0,4.127,1.473,6.676H11.7L3.426,21,4.9,23.551H9.66Q14.532,15.113,19.4,6.676L15.549,0ZM18.492,0l3.856,6.676h2.945l2.381-4.125L26.2,0Zm2.383,9.225L17.021,15.9l4.417,7.649H26.2L33,11.775l-1.473-2.55H26.764l-2.944,5.1Z"></path>
+                                </svg>
+                            </button>
+                            <span class="seven-tv-tooltip nav-tooltip">7TV Settings</span>
+                        </div>
                     </div>
-                    <div class="account-container text-icon-container">
-                        Account
+                    <div class="account-container dropdown text-icon-container">
+                        <div class="button-tooltip">
+                            <button class="account-button dropdown-button">
+                                <img class="account-icon" src="https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-70x70.png">
+                            </button>
+                        </div>
+                        <div class="dropdown-content right-dropdown-content account-dropdown-content">
+                            <div class="right-dropdown-container account-dropdown-container">
+                                <div class="account-name-icon">
+                                    <img class="account-dropdown-icon" src="https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-70x70.png">
+                                    &nbsp; Peashooter8890
+                                </div>
+                                <div class="account-list-container">
+                                    <ul class="list-dropdown-content dropdown-content account-dropdown-content-list">
+                                        <span class="line"></span>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" viewBox="0 0 20 20" fill="white">
+                                                <path fill-rule="evenodd" d="M7 2a4 4 0 0 0-1.015 7.87A1.334 1.334 0 0 1 4.667 11 2.667 2.667 0 0 0 2 13.667V18h2v-4.333c0-.368.298-.667.667-.667A3.32 3.32 0 0 0 7 12.047 3.32 3.32 0 0 0 9.333 13c.369 0 .667.299.667.667V18h2v-4.333A2.667 2.667 0 0 0 9.333 11c-.667 0-1.22-.49-1.318-1.13A4.002 4.002 0 0 0 7 2zM5 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" clip-rule="evenodd"></path>
+                                                <path d="M12 8h4v1.51V9l2-1v4l-2-1v1h-4V8z"></path>
+                                            </svg>
+                                            &nbsp; Channel
+                                        </a></li>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path d="M17 8.268a2 2 0 1 1-2 0V2h2v6.268zM15 14v4h2v-4h-2zm-3-8a2 2 0 0 0-1-1.732V2H9v2.268A2 2 0 1 0 12 6zm-3 4v8h2v-8H9zM3 8.268V2h2v6.268a2 2 0 1 1-2 0zM3 14v4h2v-4H3z"></path>
+                                            </svg>
+                                            &nbsp; Video Producer
+                                        </a></li>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M5.003 3.947A10 10 0 0 0 9.519 2.32L10 2l.48.32A10 10 0 0 0 16.029 4H17l-.494 5.641a9 9 0 0 1-4.044 6.751L10 18l-2.462-1.608a9 9 0 0 1-4.044-6.75L3 4h.972c.346 0 .69-.018 1.031-.053zm.174 1.992.309 3.528a7 7 0 0 0 3.146 5.25l1.368.894 1.368-.893a7 7 0 0 0 3.146-5.25l.309-3.529A12 12 0 0 1 10 4.376 12 12 0 0 1 5.177 5.94z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            &nbsp; Safety
+                                        </a></li>
+                                        <span class="line"></span>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M11.456 8.255 10 5.125l-1.456 3.13-3.49.485 2.552 2.516-.616 3.485L10 13.064l3.01 1.677-.616-3.485 2.553-2.516-3.491-.485zM7.19 6.424l-4.2.583c-.932.13-1.318 1.209-.664 1.853l3.128 3.083-.755 4.272c-.163.92.876 1.603 1.722 1.132L10 15.354l3.579 1.993c.846.47 1.885-.212 1.722-1.132l-.755-4.272 3.128-3.083c.654-.644.268-1.723-.664-1.853l-4.2-.583-1.754-3.77c-.406-.872-1.706-.872-2.112 0L7.19 6.424z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            &nbsp; Subscriptions
+                                        </a></li>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path d="M11 2H9v3h2V2z"></path>
+                                                <path fill-rule="evenodd" d="M18 18v-7l-1.447-2.894A2 2 0 0 0 14.763 7H5.237a2 2 0 0 0-1.789 1.106L2 11v7h16zM5.236 9h9.528l1 2H4.236l1-2zM4 13v3h12v-3h-5v1H9v-1H4z" clip-rule="evenodd"></path><path d="M4 3h2v2H4V3zm10 0h2v2h-2V3z"></path>
+                                            </svg>
+                                            &nbsp; Drops & Rewards
+                                        </a></li>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path d="M12 11h2v2h-2v-2z"></path><path fill-rule="evenodd" d="M13.45 2.078 2 6v12h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2V4.001a2 2 0 0 0-2.55-1.923zM14 6V4.004L8.172 6H14zM4 8v8h12V8H4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            &nbsp; Wallet
+                                        </a></li>
+                                        <span class="line"></span>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" fill="white" viewBox="0 0 20 20">
+                                                <path d="M10 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path><path fill-rule="evenodd" d="M9 2h2a2.01 2.01 0 0 0 1.235 1.855l.53.22a2.01 2.01 0 0 0 2.185-.439l1.414 1.414a2.01 2.01 0 0 0-.439 2.185l.22.53A2.01 2.01 0 0 0 18 9v2a2.01 2.01 0 0 0-1.855 1.235l-.22.53a2.01 2.01 0 0 0 .44 2.185l-1.415 1.414a2.01 2.01 0 0 0-2.184-.439l-.531.22A2.01 2.01 0 0 0 11 18H9a2.01 2.01 0 0 0-1.235-1.854l-.53-.22a2.009 2.009 0 0 0-2.185.438L3.636 14.95a2.009 2.009 0 0 0 .438-2.184l-.22-.531A2.01 2.01 0 0 0 2 11V9c.809 0 1.545-.487 1.854-1.235l.22-.53a2.009 2.009 0 0 0-.438-2.185L5.05 3.636a2.01 2.01 0 0 0 2.185.438l.53-.22A2.01 2.01 0 0 0 9 2zm-4 8 1.464 3.536L10 15l3.535-1.464L15 10l-1.465-3.536L10 5 6.464 6.464 5 10z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            &nbsp; Settings
+                                        </a></li>
+                                        <span class="line"></span>
+                                        <li><a href="index.html">
+                                            <svg width="19px" height="19px" version="1.1" fill="white" viewBox="0 0 20 20" x="0px" y="0px" class="ScIconSVG-sc-1q25cff-1 dSicFr">
+                                                <g>
+                                                    <path d="M16 18h-4a2 2 0 01-2-2v-2h2v2h4V4h-4v2h-2V4a2 2 0 012-2h4a2 2 0 012 2v12a2 2 0 01-2 2z"></path>
+                                                    <path d="M7 5l1.5 1.5L6 9h8v2H6l2.5 2.5L7 15l-5-5 5-5z"></path>
+                                                </g>    
+                                            </svg>
+                                            &nbsp; Log Out
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -89,7 +89,7 @@ body {
     flex-direction: column;
 }
 
-.dropdown-button {
+.dropdown-button__style {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +101,7 @@ body {
     border: none;
 }
 
-.dropdown-button:hover {
+.dropdown-button__style:hover {
     background-color: mix(black, white, 80%);
     cursor: pointer;
 }
@@ -169,9 +169,9 @@ body {
     top: 70%;
 }
 
-.dropdown:focus-within .dropdown-content {
+/*.dropdown:focus-within .dropdown-content {
     visibility: visible;
-}
+}*/
 
 .list-dropdown-content>li {
     margin-top: 10px;
@@ -570,5 +570,5 @@ li>a:hover {
 }
 
 .show {
-    display: block;
+    visibility: visible;
 }

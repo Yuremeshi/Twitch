@@ -11,6 +11,7 @@ body {
     background-color: mix(black, white, 90%);
     color: white;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .whole-page-container {
@@ -149,6 +150,10 @@ body {
 }
 
 .dropdown-content {
+    visibility: hidden;
+}
+
+.dropdown-content__style {
     list-style: none;
     position: absolute;
     top: 100%;
@@ -156,7 +161,6 @@ body {
     padding: 20px;
     padding-top: 0px;
     border-radius: 5px;
-    display: none;
     z-index: 1003;
 }
 
@@ -166,7 +170,7 @@ body {
 }
 
 .dropdown:focus-within .dropdown-content {
-    display: block;
+    visibility: visible;
 }
 
 .list-dropdown-content>li {
@@ -546,6 +550,7 @@ li>a:hover {
 
 .account-dropdown-content-list {
     display: flex;
+    flex-direction: column;
     margin: 0;
     width: 200px;
     right: 0%;
@@ -562,4 +567,8 @@ li>a:hover {
 
 .sidebar-content {
     -webkit-box-flex: 1;
+}
+
+.show {
+    display: block;
 }

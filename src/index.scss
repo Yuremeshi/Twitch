@@ -3,25 +3,23 @@ $icon_size: 1em;
 body {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     padding: 0;
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    min-height: 100vh;
+    height: 100%;
     background-color: mix(black, white, 90%);
-    border: 2px solid red;
     color: white;
     overflow: scroll;
 }
 
 .whole-page-container {
-    border: 2px solid white;
     flex-grow: 1;
 }
 
 // CSS for general containers
 
 .top-nav-container {
-    border: 2px solid blue;
     height: 3.5rem;
     z-index: 1000;
 }
@@ -29,7 +27,6 @@ body {
 .nav-div-container {
     display: flex;
     align-items: center;
-    border: 2px solid green;
     height: 100%;
 }
 
@@ -556,3 +553,13 @@ li>a:hover {
     border-top-right-radius: 0px;
 }
 
+.sidebar-container {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.sidebar-content {
+    -webkit-box-flex: 1;
+}

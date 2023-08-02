@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         } catch (err) {
+            // this is ugly code, but it's a temporary fix. 
+            // this strategy essentially tries to force compiler into an error then uses it to execute our logic
+            // this is obviously less predictable and scalable which makes it worse than predictable logic. 
+            // there is even a bug where if you click in an area that's really close to the dropdown, it won't work - 
+            // but that bug might be related to other things too? I am not sure
+            // tldr; this is bad code that should only be used to satisfy angry customers that need changes made IMMEDIATELY
             document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
         }
         return;

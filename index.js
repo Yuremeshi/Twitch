@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
             e.target.closest(".dropdown").querySelector(".dropdown-content").classList.toggle("show");
-        } else if (e.target.classList.contains("close")) {
-            document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
-        }
+            return;
+        } 
+        document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
     })
 })

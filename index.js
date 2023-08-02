@@ -7,8 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
             e.target.closest(".dropdown").querySelector(".dropdown-content").classList.toggle("show");
-            return;
         } 
-        document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
+        try {
+            if (e.target.classList.contains("close")) {
+                document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
+            }
+            if (e.target.parentElement.classList.contains('dropdown-content')) {
+                return;
+            }
+            if (e.target.parentElement.parentElement.classList.contains('dropdown-content')) {
+                return;
+            }
+
+        } catch (err) {
+            document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
+        }
+        return;
     })
 })

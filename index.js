@@ -1,6 +1,3 @@
-let open = 0;
-let dropdownClass;
-
 document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", e => {
         if (e.target.classList.contains("dropdown-button")) {
@@ -13,6 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (e.target.classList.contains("close")) {
             document.querySelectorAll(".dropdown-content").forEach(div => div.classList.remove("show"));
         }
-        return;
     })
 })
